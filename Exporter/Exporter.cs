@@ -228,6 +228,8 @@ public class AvonturenGarageAwakePatch
                 color = FormatSkinColor((CosmeticColor) skin)
             });
         }
+
+        Directory.CreateDirectory(Path.Combine(Paths.GameRootPath, "Zeepkist_Data", "ExportedData"));
         
         File.WriteAllText(Path.Combine(Paths.GameRootPath, "Zeepkist_Data", "ExportedData", "data.json"), LitJson.JsonMapper.ToJson(exportedData));
         
